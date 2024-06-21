@@ -38,8 +38,15 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 -->
-<!---# First Milestone-->
+# First Milestone-->
 
+To start my project, I had to connect my arduino to my computer in order to collect data using edge impulse. Originally, I was planning to collect data via a custom python script that would use BLEAK to link to edge impulse directly. However, seeing as how this was very time-consuming and I was already in over my head, I decided to save that idea for my second milestone. I decided to just directly collect data with my nano connected to the computer via a USB cable for now, and collect more data via bluetooth later.
+
+I first had to install the proper CLI's for both edge impulse and arduino, which proved to require a lot of troubleshooting over the next few days. Once that was done, I made sure to flash the firmware, and then it was time to begin the data collecting process.
+
+Since the arduino still had to be connected to the computer with a cable, (something I will fixt next milestone), I decided to do a few basic shoulder movements and train my model to around an 80% accuracy. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough.
+
+After training, I then deployed my model in both the arduino IDE and on the nano itself. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 # Starter Project
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wGviX-kwstI?si=v7bMy-6ZhwkNnDPd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
