@@ -38,7 +38,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 -->
-# First Milestone-->
+# First Milestone
 
 To start my project, I had to connect my arduino to my computer in order to collect data using edge impulse. Originally, I was planning to collect data via a custom python script that would use BLEAK to link to edge impulse directly. However, seeing as how this was very time-consuming and I was already in over my head, I decided to save that idea for my second milestone. I decided to just directly collect data with my nano connected to the computer via a USB cable for now, and collect more data via bluetooth later.
 
