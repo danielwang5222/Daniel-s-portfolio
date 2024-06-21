@@ -9,7 +9,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
-<img src="David_W.png" width="100" height="100">
+<img src="David_W.jpg" width="100" height="100">
 
 <>
 <!--- 
