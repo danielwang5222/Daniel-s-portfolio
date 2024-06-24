@@ -46,7 +46,7 @@ For your second milestone, explain what you've worked on since your previous mil
   I had to connect my Arduino Nano to my computer in order to collect data using Edge Impulse, so that I could then train a model to recognize the motionI decided to just directly collect data with my Nano connected to the computer via a USB cable for now, and collect more data via Bluetooth later.
   I first had to install the proper CLI's, or command line interfaces, for both edge impulse and Arduino. This required a lot of troubleshooting over a few days. Once that was done, I made sure to flash the firmwares for the Edge Impulse CLI and the Arduino CLI, and then it was time to begin the data collecting process.
   
-  <!--Figure here of your impulse? Screenshot from your website. Maybe in caption of your figure put what is the feature component?-->
+  <img src="Screen Shot 2024-06-24 at 2.19.10 PM.png" >
 
   Since the Arduino still had to be connected to the computer with a cable, (something to expand upon for my next milestone), I decided to do a few basic shoulder movements and train my model. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. 
 
