@@ -48,21 +48,21 @@ For your second milestone, explain what you've worked on since your previous mil
   I first had to install the proper CLI's, or command line interfaces, for both Edge Impulse and Arduino. This required a lot of troubleshooting over a few days. Since I was using an outdated version of MacOS, I had to use a different version of Homebrew to install everything. Once that was done, I made sure to flash the firmwares for the Edge Impulse CLI and the Arduino CLI, and then it was time to begin the data collecting process.
   
   <img src="Screen Shot 2024-06-24 at 2.19.10 PM.png" >
-  Figure 1: impulse design
+Figure 1: Above is the impulse design
 
   Since the Arduino still had to be connected to the computer with a cable, (something to expand upon for my next milestone), I decided to do a few basic shoulder movements and train my model. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. 
 
   <img src="Screen Shot 2024-06-21 at 4.21.45 PM.png" >
 
   <img src="Screen Shot 2024-06-24 at 2.09.01 PM.png" >
-  Figure 2: data before and after filtering, reduces noise and produces a much smoother profile
+Figure 2: Above is the data before and after filtering, reduces noise and produces a much smoother profile
   
   In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough. A learning rate is how much the model adjusts, and I needed to change it because it was too small before. Epoch and learning rate are hyperparameters, which determine the model's learning rate and how it adjusts its parameters.
   
   <img src="Screen Shot 2024-06-24 at 2.39.43 PM.png" >
-  Figure 3: classifier design, had to decrease learning rate so that it is less sensitive to features since I have a lot, and also increase epoch count so that it learns for longer
+Figure 3: Above is my classifier design, had to decrease learning rate so that it is less sensitive to features since I have a lot, and also increase epoch count so that it learns for longer
   <img src="Screen Shot 2024-06-24 at 2.40.40 PM.png" >
-  Figure 4: final deployment, had to make sure to also deploy on the Nano itself
+Figure 4: Above is the final deployment, had to make sure to also deploy on the Nano itself
 
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the model from the terminal directly. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
