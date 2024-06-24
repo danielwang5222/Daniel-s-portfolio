@@ -63,6 +63,7 @@ For your second milestone, explain what you've worked on since your previous mil
   Figure 3: classifier design, had to decrease learning rate so that it is less sensitive to features since I have a lot, and also increase epoch count so that it learns for longer
   <img src="Screen Shot 2024-06-24 at 2.40.40 PM.png" >
   Figure 4: final deployment, had to make sure to also deploy on the Nano itself
+
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the model from the terminal directly. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 
