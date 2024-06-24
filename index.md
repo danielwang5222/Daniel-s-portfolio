@@ -51,6 +51,8 @@ For your second milestone, explain what you've worked on since your previous mil
   Since the Arduino still had to be connected to the computer with a cable, (something to expand upon for my next milestone), I decided to do a few basic shoulder movements and train my model. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. 
 
   <img src="Screen Shot 2024-06-21 at 4.21.45 PM.png" >
+
+  <img src="Screen Shot 2024-06-24 at 2.09.01 PM.png" >
   
   In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough. A learning rate is how much the model adjusts, and I needed to change it because it was too small before. Epoch and learning rate are hyperparameters, which determine the model's learning rate and how it adjusts its parameters.
   
