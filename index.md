@@ -7,12 +7,12 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 |:--:|:--:|:--:|:--:|
 | Daniel W | Lynbrook High | Electrical/Mechanical Engineering | Incoming Junior
 
-<!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
+<!--**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 <img src="David_W.jpg" width="300" height="400">
 
 <>
-<!--- 
+<!--
 # Final Milestone
 
 
@@ -79,6 +79,7 @@ I made a basic, calculator for my starter project. This was mainly used for prac
 When pressed, the buttons on the circuit board allow the the flow of electricity through resistors, transistors and other components into an integrated circuit, which detects the newfound change in voltage. The IC then runs the input through a series of logic computations in order to compute the intended output, which is then displayed on an LCD screen.
 
 The challenge of this project was the precision required when soldering the components. Some of the pins were very close together, and I would accidentally solder them together, creating a short circuit. Thankfully, I was able to remove the excess solder, and this issue was soon resolved.
+
 <!--
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
