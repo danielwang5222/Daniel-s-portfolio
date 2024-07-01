@@ -11,7 +11,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <img src="David_W.jpg" width="300" height="400">
 
-<>
+
 <!--
 # Final Milestone
 
