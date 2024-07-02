@@ -37,7 +37,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
   The sketch I used created a union of the data every time it ran, and was always collecting new data and appending the new values. At the start, it would also advertise the Arduino Nano as a BLE device and set a custom name, so that eventually my computer would be able to find it. I would then run the python script which would check for all nearby BLE devices, and find the one with the correct name (my Arduino Nano). 
 
-<img src="Screen Shot 2024-07-02 at 3.41.47 PM.png" >
+<img src="Screen Shot 2024-07-02 at 4.06.02 PM.png" >
   
   The script would then access the Arduino Nano, and collect data from it for a period of time that the user would specify. Then, the script would create a json file, a standard format accepted by Edge Impulse, with all the collected data, and upload it all to Edge Impulse.
 
