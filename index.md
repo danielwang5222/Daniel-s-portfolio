@@ -115,8 +115,8 @@ void loop() {
 
 | **Part** | **Note** | **Price** | **Link** |
 | :--: | :--: | :--: | :--: |
-| Arduino Nano 33 BLE Sense Rev2 | Collecting sensor data | $44.50 | <a href="https://www.amazon.com/Arduino-Nano-Sense-headers-ABX00070/dp/B0BQHZ88WD"> Link </a> |
-| Anker PowerCore 5000 | charging | $21.99 | <a href="https://www.amazon.com/Anker-PowerCore-Ultra-Compact-High-Speed-Technology/dp/B01CU1EC6Y?th=1"> Link </a> |
+| Arduino Nano 33 BLE Sense Rev2 | Collecting Sensor Data | $44.50 | <a href="https://www.amazon.com/Arduino-Nano-Sense-headers-ABX00070/dp/B0BQHZ88WD"> Link </a> |
+| Anker PowerCore 5000 | Charging | $21.99 | <a href="https://www.amazon.com/Anker-PowerCore-Ultra-Compact-High-Speed-Technology/dp/B01CU1EC6Y?th=1"> Link </a> |
 
 <!--
 
