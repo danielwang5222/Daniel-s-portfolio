@@ -29,7 +29,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 -->
 # Second Milestone
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Y0rCxOON5dc&list=PLe-u_DjFx7evDJ6N_vX36J16ru7SvHV5m&index=45" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y0rCxOON5dc?si=B7cWHj8KtdUClGIV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   For my second milestone, I showed that I could collect and upload training data from my Arduino Nano 33 BLE Sense to Edge Impulse in real time via Bluetooth, so that my data collection would not be hindered by the need of a USB cable.
 
@@ -49,7 +49,7 @@ Figure 1: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impuls
 
 
 # First Milestone
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=QTPHC-oMB-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QTPHC-oMB-E?si=b488i-esRmzSUsCn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   To start my project, I showed that I could predict two shoulder movements (lateral raise and chest fly) in real time using Edge Impulse with data from my Arduino Nano 33 BLE Sense.
   
