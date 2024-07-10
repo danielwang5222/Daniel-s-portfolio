@@ -71,11 +71,8 @@ Figure 2: Above is the data before and after filtering. The filter reduces noise
   
   In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough. A learning rate is how much the model adjusts, and I needed to change it because it was too small before and wouldn’t learn enough. Epoch and learning rate are hyperparameters, which are some of the parameters in machine learning.
   
-  <img src="Screen Shot 2024-06-24 at 2.39.43 PM.png" >
+  <img src="Screen Shot 2024-06-24 at 2.39.43 PM.png" width="577" height="749">
 Figure 3: Above is my classifier design. I had to adjust the learning rate so that it is less sensitive to features since I have a lot of different features (i.e. accelerometers and gyroscopes), and also increase epoch count so that it learns for longer.
-  <img src="Screen Shot 2024-06-24 at 2.40.40 PM.png" >
-Figure 4: Above is the final deployment, I had to make sure to also deploy on my device itself.
-
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the full impulse from the terminal directly using the command $ edge-impulse-run-impulse. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 
