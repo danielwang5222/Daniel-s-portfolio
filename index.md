@@ -24,14 +24,16 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
   I first had to retrain my model with the data that I had collected via BLE previously. I made sure to lower my learning rate and batch size, while also drastically increasing the epoch count so that my model could find as general of a solution as possible. 
 
 <img src="Screen Shot 2024-07-15 at 2.16.01 PM.png" >
-Figure 1: Above is the impulse design, showing the dropout and hidden layers as well as the data explorer.
+
+> Figure 1: Above is the impulse design, showing the dropout and hidden layers as well as the data explorer.
 
   To make sure that my model didn’t just memorize the parameters of my training data, I added in a few dropout layers, which randomly disable certain neurons and ensure that the model generates more robust features. After training, it was time to deploy my model on my Arduino Nano, and also modify the sketch to then send the inferences to my phone.
 
   After getting the fusion sensor example from my deployed model (which gathers data from all sensors), I then had to find a way to include BLE so that the inferences would be sent to my phone. I found little guidance online, as I was using a different version of an Arduino Nano than most. Eventually, I found how to write values to the nRF app.
 
 <img srs ="0.png" >
-Figure 2: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
+
+> Figure 2: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
 
   Figuring out where exactly to send the inferences and where to read it was the biggest challenge. I soon discovered that I was able to write values to the inference characteristic I had defined in my sketch. Even after that, it took a lot of fidgeting with the app in order to enable notifications for the characteristic before I was finally able to show the data.
 
@@ -54,7 +56,7 @@ Figure 2: Above is a screenshot from the nRF app, showing how the value of the c
 
 <img src="Flowcharts.png" >
 
-Figure 1: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impulse (C)
+> Figure 3: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impulse (C)
 
   Deciding on how to properly identify the device was a challenge, as I was originally planning to search for devices based on their MAC Addresses. However, I soon learned that my operating system (macOS) was incapable of doing so, and so instead I had to switch my method. Eventually, after installing some software such as Bluetility on my computer that could check for nearby BLE devices, I realized that identifying by name would be easiest. In the Arduino sketch, I set the device name as “ARDUINO NANO”, and entered the name as a system argument whenever I ran the script to collect data. Next up, I’m planning to deploy the model on the Arduino IDE, and modify the code to link with the nRF app, an app capable of connecting to bluetooth devices, so that I’m able to use it from my phone.
 
@@ -71,7 +73,8 @@ Figure 1: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impuls
 
   
   <img src="Screen Shot 2024-06-24 at 2.19.10 PM.png" >
-Figure 1: Above is the impulse design.
+  
+> Figure 4: Above is the impulse design.
 
     
   Since the Arduino still had to be connected to the computer with a cable, (this restricted my movement,  something to expand upon for my next milestone), I decided to do a few basic shoulder movements and train my model. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. First, I preprocessed my data using a low-pass filter with a cut-off frequency of 20 hertz. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. 
@@ -79,12 +82,14 @@ Figure 1: Above is the impulse design.
   <img src="Screen Shot 2024-06-21 at 4.21.45 PM.png" >
 
   <img src="Screen Shot 2024-06-24 at 2.09.01 PM.png" >
-Figure 2: Above is the data before and after filtering. The filter reduces noise and produces a much smoother profile.
+  
+> Figure 5: Above is the data before and after filtering. The filter reduces noise and produces a much smoother profile.
   
   In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough. A learning rate is how much the model adjusts, and I needed to change it because it was too small before and wouldn’t learn enough. Epoch and learning rate are hyperparameters, which are some of the parameters in machine learning.
   
   <img src="Screen Shot 2024-06-24 at 2.39.43 PM.png" width="577" height="749">
-Figure 3: Above is my classifier design. I had to adjust the learning rate so that it is less sensitive to features since I have a lot of different features (i.e. accelerometers and gyroscopes), and also increase epoch count so that it learns for longer.
+  
+> Figure 6: Above is my classifier design. I had to adjust the learning rate so that it is less sensitive to features since I have a lot of different features (i.e. accelerometers and gyroscopes), and also increase epoch count so that it learns for longer.
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the full impulse from the terminal directly using the command $ edge-impulse-run-impulse. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 
