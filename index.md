@@ -31,7 +31,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
   After getting the fusion sensor example from my deployed model (which gathers data from all sensors), I then had to find a way to include BLE so that the inferences would be sent to my phone. I found little guidance online, as I was using a different version of an Arduino Nano than most. Eventually, I found how to write values to the nRF app.
 
-<img srs ="0.png" >
+<img src="0.png" >
 
 > Figure 2: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
 
