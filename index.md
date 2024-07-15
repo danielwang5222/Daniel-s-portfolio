@@ -93,6 +93,14 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the full impulse from the terminal directly using the command $ edge-impulse-run-impulse. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 
+# Bill of Materials
+
+| **Part** | **Note** | **Price** | **Link** |
+| :--: | :--: | :--: | :--: |
+| Arduino Nano 33 BLE Sense Rev2 | Collecting Sensor Data | $44.50 | <a href="https://www.amazon.com/Arduino-Nano-Sense-headers-ABX00070/dp/B0BQHZ88WD"> Link </a> |
+| Anker PowerCore 5000 | Charging | $21.99 | <a href="https://www.amazon.com/Anker-PowerCore-Ultra-Compact-High-Speed-Technology/dp/B01CU1EC6Y?th=1"> Link </a> |
+
+
 
 # Starter Project
 
@@ -104,12 +112,6 @@ When pressed, the buttons on the circuit board allow the the flow of electricity
 
 The challenge of this project was the precision required when soldering the components. Some of the pins were very close together, and I would accidentally solder them together, creating a short circuit. Thankfully, I was able to remove the excess solder, and this issue was soon resolved.
 
-# Bill of Materials
-
-| **Part** | **Note** | **Price** | **Link** |
-| :--: | :--: | :--: | :--: |
-| Arduino Nano 33 BLE Sense Rev2 | Collecting Sensor Data | $44.50 | <a href="https://www.amazon.com/Arduino-Nano-Sense-headers-ABX00070/dp/B0BQHZ88WD"> Link </a> |
-| Anker PowerCore 5000 | Charging | $21.99 | <a href="https://www.amazon.com/Anker-PowerCore-Ultra-Compact-High-Speed-Technology/dp/B01CU1EC6Y?th=1"> Link </a> |
 
 <!--
 # Schematics 
