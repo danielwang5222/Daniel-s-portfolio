@@ -12,7 +12,6 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 <img src="David_W.jpg" width="300" height="400">
 
 
-<!--
 # Final Milestone
 
 
@@ -20,14 +19,27 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestonehttps://www.youtube.com/watch?v=wGviX-kwstI&list=PLe-u_DjFx7etk6dyDuivrw-gQGhkx9TJL&index=51
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+	For my third milestone, I deployed my final model that can detect pushups, squats, and resting position, and then send the inference data over BLE to the nRF Connect app on my phone.
+
+	I first had to retrain my model with the data that I had collected via BLE previously. I made sure to lower my learning rate and batch size, while also drastically increasing the epoch count so that my model could find as general of a solution as possible. 
+
+<img src="Screen Shot 2024-07-15 at 2.16.01 PM.png" >
+Figure 1: Above is the impulse design, showing the dropout and hidden layers as well as the data explorer.
+
+To make sure that my model didn’t just memorize the parameters of my training data, I added in a few dropout layers, which randomly disable certain neurons and ensure that the model generates more robust features. After training, it was time to deploy my model on my Arduino Nano, and also modify the sketch to then send the inferences to my phone.
+
+	After getting the fusion sensor example from my deployed model (which gathers data from all sensors), I then had to find a way to include BLE so that the inferences would be sent to my phone. I found little guidance online, as I was using a different version of an Arduino Nano than most. Eventually, I found how to write values to the nRF app.
+
+<img srs ="0.png" >
+Figure 2: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
+
+	Figuring out where exactly to send the inferences and where to read it was the biggest challenge. I soon discovered that I was able to write values to the inference characteristic I had defined in my sketch. Even after that, it took a lot of fidgeting with the app in order to enable notifications for the characteristic before I was finally able to show the data.
+
+	Working on this project over the past several weeks has helped me learn more about the engineering process. The biggest takeaway I have is that you shouldn’t be afraid to ask others for help. Before, I’d worked mainly on projects with myself or just a few other people, and I’d never asked people who weren’t also doing my task to help. The challenges that came with this project helped me become more comfortable with expressing my frustrations and forgo the sense of embarrassment that came from asking others for help. The challenges, particularly the Bluetooth data collection and deployment, were extremely taxing but made me feel a great sense of triumph after completing them. In the future, I hope to become even more collaborative while expanding my skill set to other branches of engineering.
 
 
--->
+
+
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0rCxOON5dc?si=B7cWHj8KtdUClGIV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
