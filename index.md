@@ -16,9 +16,9 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m9YoqqC_Rpw?si=NgSVO2sN_YfnxDzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-	For my modification, I created a custom 3D-printed case to house my Arduino Nano. I made the case with a sliding lid, and holes for both a velcro strap and the cable used to connect to the battery pack.
+  For my modification, I created a custom 3D-printed case to house my Arduino Nano. I made the case with a sliding lid, and holes for both a velcro strap and the cable used to connect to the battery pack.
 
-	I first had to create a 3D model for the case. I started off by measuring the physical dimensions of my Arduino Nano in millimeters, so I could get a rough shape for my case. Then, in Onshape, which is an online service capable of designing complex 3D models, I created a basic sketch with a rectangle that was the same width and length as the Arduino Nano. Then, I made sure to offset it by 0.6 millimeters, so that the case had ample space for the Arduino Nano to easily be inserted. I then used the Extrude function and entered in a depth (the height of my Arduino Nano), so that I could project the 2D rectangle into the third dimension, making a 3D shape. 
+  I first had to create a 3D model for the case. I started off by measuring the physical dimensions of my Arduino Nano in millimeters, so I could get a rough shape for my case. Then, in Onshape, which is an online service capable of designing complex 3D models, I created a basic sketch with a rectangle that was the same width and length as the Arduino Nano. Then, I made sure to offset it by 0.6 millimeters, so that the case had ample space for the Arduino Nano to easily be inserted. I then used the Extrude function and entered in a depth (the height of my Arduino Nano), so that I could project the 2D rectangle into the third dimension, making a 3D shape. 
 
 <img src="Screen Shot 2024-07-18 at 4.16.34 PM.png">
 
