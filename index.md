@@ -11,6 +11,30 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <img src="David_W.jpg" width="300" height="400">
 
+# Modification
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m9YoqqC_Rpw?si=NgSVO2sN_YfnxDzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	For my modification, I created a custom 3D-printed case to house my Arduino Nano. I made the case with a sliding lid, and holes for both a velcro strap and the cable used to connect to the battery pack.
+
+	I first had to create a 3D model for the case. I started off by measuring the physical dimensions of my Arduino Nano in millimeters, so I could get a rough shape for my case. Then, in Onshape, which is an online service capable of designing complex 3D models, I created a basic sketch with a rectangle that was the same width and length as the Arduino Nano. Then, I made sure to offset it by 0.6 millimeters, so that the case had ample space for the Arduino Nano to easily be inserted. I then used the Extrude function and entered in a depth (the height of my Arduino Nano), so that I could project the 2D rectangle into the third dimension, making a 3D shape. 
+
+<img src="Screen Shot 2024-07-18 at 4.16.34 PM.png">
+Figure 1: Above is the first sketch I made with the length and width of the Arduino Nano in mind, accounting for the extra space needed. 
+
+  Now, I had to make the case actually hollow. I used the shell operation and gave the case a wall thickness of 2.5 millimeters. Then, on one of the walls I created a new sketch, drawing an outline for the cable. I then extruded it, using the clear function, creating a hole in one of the walls. Next up was the lid. In that same sketch, I drew an outline for the two areas in which the edges of the lid would slide. Then, for each side, I made a copy of the shape, and set them each 0.6 millimeters apart. This was to give the lid “tolerance”, as if the lid was the exact same size as the hole, it wouldn’t actually be able to slide. So, I had to make the lid slightly smaller so that it would still slide smoothly.
+
+<img src="Screen Shot 2024-07-18 at 4.13.19 PM.png">
+Figure 2: Above is the sketch showing where the lid slides and the lid itself.
+
+  Finally, I had to create the holes in the bottom for the velcro strap to slide through. On one of the other walls, I created a sketch where I created a rectangle with the dimensions of the strap, accounting for tolerance. Then, I simply extruded all the way to the other wall, creating a hole in each side and completing the case.
+
+<img src="Screen Shot 2024-07-18 at 4.21.33 PM.png">
+Figure 3: Above is the sketch showing the placement and dimensions of the hole for the strap.
+
+  When I first began this modification, I knew nothing about Computer Aided Design (CAD). This simple case served as a good introduction in how I could use certain tools and functions to create elaborate shapes and designs. In the future, I hope to use these skills to create more diverse projects.
+
 
 # Final Milestone
 
@@ -23,7 +47,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <img src="Screen Shot 2024-07-15 at 2.16.01 PM.png" >
 
-> Figure 1: Above is the impulse design, showing the dropout and hidden layers as well as the data explorer.
+> Figure 4: Above is the impulse design, showing the dropout and hidden layers as well as the data explorer.
 
   To make sure that my model didn’t just memorize the parameters of my training data, I added in a few dropout layers, which randomly disable certain neurons and ensure that the model generates more robust features. After training, it was time to deploy my model on my Arduino Nano, and also modify the sketch to then send the inferences to my phone.
 
@@ -31,7 +55,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <img src="0.png" >
 
-> Figure 2: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
+> Figure 5: Above is a screenshot from the nRF app, showing how the value of the characteristic was changed to the corresponding inference.
 
   Figuring out where exactly to send the inferences and where to read it was the biggest challenge. I soon discovered that I was able to write values to the inference characteristic I had defined in my sketch. Even after that, it took a lot of fidgeting with the app in order to enable notifications for the characteristic before I was finally able to show the data.
 
@@ -54,7 +78,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
 <img src="Flowcharts.png" >
 
-> Figure 3: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impulse (C)
+> Figure 6: Arduino Nano (A) sends data over BLE (B) and uploads it to Edge Impulse (C)
 
   Deciding on how to properly identify the device was a challenge, as I was originally planning to search for devices based on their MAC Addresses. However, I soon learned that my operating system (macOS) was incapable of doing so, and so instead I had to switch my method. Eventually, after installing some software such as Bluetility on my computer that could check for nearby BLE devices, I realized that identifying by name would be easiest. In the Arduino sketch, I set the device name as “ARDUINO NANO”, and entered the name as a system argument whenever I ran the script to collect data. Next up, I’m planning to deploy the model on the Arduino IDE, and modify the code to link with the nRF app, an app capable of connecting to bluetooth devices, so that I’m able to use it from my phone.
 
@@ -72,7 +96,7 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
   
   <img src="Screen Shot 2024-06-24 at 2.19.10 PM.png" >
   
-> Figure 4: Above is the impulse design.
+> Figure 7: Above is the impulse design.
 
     
   Since the Arduino still had to be connected to the computer with a cable, (this restricted my movement,  something to expand upon for my next milestone), I decided to do a few basic shoulder movements and train my model. I had three classes, or movements: lateral raises, chest flies, and a third category called "neither" in which I would do day-to-day movements or not move my arm at all. I then created my impulse using a basic classifier and feature extractor. First, I preprocessed my data using a low-pass filter with a cut-off frequency of 20 hertz. I made sure to optimize my model to the proper amount of features, as well as fine-tune my data in order to maximize efficiency. 
@@ -81,13 +105,13 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 
   <img src="Screen Shot 2024-06-24 at 2.09.01 PM.png" >
   
-> Figure 5: Above is the data before and after filtering. The filter reduces noise and produces a much smoother profile.
+> Figure 8: Above is the data before and after filtering. The filter reduces noise and produces a much smoother profile.
   
   In the classifier, I made sure to adjust the learning rate and epoch count accordingly, so that my model would minimize loss while learning fast enough. A learning rate is how much the model adjusts, and I needed to change it because it was too small before and wouldn’t learn enough. Epoch and learning rate are hyperparameters, which are some of the parameters in machine learning.
   
   <img src="Screen Shot 2024-06-24 at 2.39.43 PM.png" width="577" height="749">
   
-> Figure 6: Above is my classifier design. I had to adjust the learning rate so that it is less sensitive to features since I have a lot of different features (i.e. accelerometers and gyroscopes), and also increase epoch count so that it learns for longer.
+> Figure 9: Above is my classifier design. I had to adjust the learning rate so that it is less sensitive to features since I have a lot of different features (i.e. accelerometers and gyroscopes), and also increase epoch count so that it learns for longer.
   
   After training, it was time for deployment. I first deployed it on the Arduino IDE, so that I could run it directly from there. The final step was to also deploy it on the Arduino Nano itself, and flash its firmware so that I could also run the full impulse from the terminal directly using the command $ edge-impulse-run-impulse. The model is now able to predict which movement I'm doing, but is still hindered by the need of a cable. Next up, I'm planning to make both data collection and deployment available via bluetooth. My main challenges during this process were flashing all the necessary firmware, especially during deployment.
 
