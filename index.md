@@ -21,17 +21,20 @@ Allows you to monitor your fitness levels with a tiny, convenient ML-powered fit
 	I first had to create a 3D model for the case. I started off by measuring the physical dimensions of my Arduino Nano in millimeters, so I could get a rough shape for my case. Then, in Onshape, which is an online service capable of designing complex 3D models, I created a basic sketch with a rectangle that was the same width and length as the Arduino Nano. Then, I made sure to offset it by 0.6 millimeters, so that the case had ample space for the Arduino Nano to easily be inserted. I then used the Extrude function and entered in a depth (the height of my Arduino Nano), so that I could project the 2D rectangle into the third dimension, making a 3D shape. 
 
 <img src="Screen Shot 2024-07-18 at 4.16.34 PM.png">
-Figure 1: Above is the first sketch I made with the length and width of the Arduino Nano in mind, accounting for the extra space needed. 
+
+> Figure 1: Above is the first sketch I made with the length and width of the Arduino Nano in mind, accounting for the extra space needed. 
 
   Now, I had to make the case actually hollow. I used the shell operation and gave the case a wall thickness of 2.5 millimeters. Then, on one of the walls I created a new sketch, drawing an outline for the cable. I then extruded it, using the clear function, creating a hole in one of the walls. Next up was the lid. In that same sketch, I drew an outline for the two areas in which the edges of the lid would slide. Then, for each side, I made a copy of the shape, and set them each 0.6 millimeters apart. This was to give the lid “tolerance”, as if the lid was the exact same size as the hole, it wouldn’t actually be able to slide. So, I had to make the lid slightly smaller so that it would still slide smoothly.
 
 <img src="Screen Shot 2024-07-18 at 4.13.19 PM.png">
-Figure 2: Above is the sketch showing where the lid slides and the lid itself.
+
+> Figure 2: Above is the sketch showing where the lid slides and the lid itself.
 
   Finally, I had to create the holes in the bottom for the velcro strap to slide through. On one of the other walls, I created a sketch where I created a rectangle with the dimensions of the strap, accounting for tolerance. Then, I simply extruded all the way to the other wall, creating a hole in each side and completing the case.
 
 <img src="Screen Shot 2024-07-18 at 4.21.33 PM.png">
-Figure 3: Above is the sketch showing the placement and dimensions of the hole for the strap.
+
+> Figure 3: Above is the sketch showing the placement and dimensions of the hole for the strap.
 
   When I first began this modification, I knew nothing about Computer Aided Design (CAD). This simple case served as a good introduction in how I could use certain tools and functions to create elaborate shapes and designs. In the future, I hope to use these skills to create more diverse projects.
 
